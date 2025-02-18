@@ -346,6 +346,8 @@ class MujocoXMLObject(MujocoObject, MujocoXML):
             if "name" not in joint_spec:
                 joint_spec["name"] = "joint{}".format(i)
 
+        print(fname, name)
+
         # Lastly, parse XML tree appropriately
         self._obj = self._get_object_subtree()
 

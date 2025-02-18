@@ -33,6 +33,15 @@ class CanObject(MujocoXMLObject):
             duplicate_collision_geoms=True,
         )
 
+class TShapeObject(MujocoXMLObject):
+    """
+    T shape object
+    """
+
+    def __init__(self, name):
+        super().__init__(
+            xml_path_completion("objects/t_shape.xml"), name=name, obj_type="all", duplicate_collision_geoms=True
+        )
 
 class LemonObject(MujocoXMLObject):
     """
@@ -163,6 +172,15 @@ class MilkVisualObject(MujocoXMLObject):
             duplicate_collision_geoms=True,
         )
 
+class TShapeVisualObject(MujocoXMLObject):
+    """
+    Visual fiducial of t shape (used in PickPlace)
+    """
+
+    def __init__(self, name):
+        super().__init__(
+            xml_path_completion("objects/t_shape-visual.xml"), name=name, joints=None, obj_type="visual", duplicate_collision_geoms=True
+        )
 
 class BreadVisualObject(MujocoXMLObject):
     """
